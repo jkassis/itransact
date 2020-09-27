@@ -4,12 +4,25 @@
   "description": "iTransact API in Typescript",
   "main": "dist/Module.js",
   "types": "dist/Module.d.ts",
-  "author": "Jeremy Kassis",
+  "author": "Jeremy Kassis <jkassis@gmail.com>",
   "homepage": "https://github.com/jkassis/itransact-node-ts#Readme.md",
   "repository": "https://github.com/jkassis/itransact-node-ts",
   "license": "SEE LICENSE IN LICENSE.MD",
   "type": "module",
   "engines": {},
+  "keywords": [
+    "itransact",
+    "payroc",
+    "payment",
+    "merchant",
+    "transaction",
+    "integration",
+    "credit",
+    "card",
+    "check",
+    "ach",
+    "omnichannel"
+  ],
   "scripts": {
     "prepare": "tsc"
   },
