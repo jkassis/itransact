@@ -5,6 +5,7 @@
   "main": "dist/Module.js",
   "types": "dist/Module.d.ts",
   "author": "Jeremy Kassis",
+  "homepage": "https://github.com/jkassis/itransact-node-ts",
   "license": "SEE LICENSE IN LICENSE.MD",
   "type": "module",
   "engines": {},
