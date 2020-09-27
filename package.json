@@ -1,6 +1,6 @@
 {
   "name": "@jkassis/itransact",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "iTransact API",
   "main": "dist/Module.js",
   "types": "dist/Module.d.ts",
