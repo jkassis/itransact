@@ -1,0 +1,18 @@
+{
+  "name": "@jkassis/itransact",
+  "version": "1.0.0",
+  "description": "iTransact API",
+  "main": "dist/Module.js",
+  "types": "dist/Module.d.ts",
+  "author": "Jeremy Kassis",
+  "license": "SEE LICENSE IN LICENSE.MD",
+  "type": "module",
+  "engines": {},
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "dependencies": {
+    "@types/node": "^14.11.2",
+    "itransact-node": "^2.1.0"
+  }
+}

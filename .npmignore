@@ -1,0 +1,5 @@
+src
+node_modules/*
+tags
+*.tsbuildinfo
+yarn-error.log
