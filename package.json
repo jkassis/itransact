@@ -1,6 +1,6 @@
 {
   "name": "itransact-node-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "iTransact API in Typescript",
   "main": "dist/Module.js",
   "types": "dist/Module.d.ts",
