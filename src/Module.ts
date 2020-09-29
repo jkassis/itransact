@@ -225,16 +225,12 @@ export class API {
                 body: payloadJsonString
             }
 
-            console.log("Request: ", req)
-
             request(req, function (error, response, body) {
                 if (error) {
                     reject(error)
                 } else if (response && response.statusCode != successStatusCode) {
-                    console.log("Response: ", body)
                     reject(body)
                 } else {
-                    console.log("Response: ", body)
                     resolve(JSON.parse(body))
                 }
             })
@@ -254,7 +250,7 @@ export class API {
     }
 
     PayoutCreate(req: PayoutReq): Promise<Payout> {
-        return this.post<Payout>(`payouts`, req, 200)
+        return this.post<Payout>(`payouts`, req, 201)
     }
 
     PayoutGet(id: string): Promise<Payout> {
