@@ -207,7 +207,7 @@ export class API {
         return Buffer.from(apiUsername, 'utf8').toString('base64')
     }
 
-    async post<ResType>(urlEndpoint: string, payload: any, successStatusCode: number): Promise<ResType> {
+    async post<ResType>(urlEndpoint: string, payload: any): Promise<ResType> {
         const usernameEncoded = this.apiUser
         // const usernameEncoded = this.encode_username(this.apiUser)
         const payloadSignature = this.sign_payload(payload)
@@ -228,7 +228,7 @@ export class API {
             request(req, function (error, response, body) {
                 if (error) {
                     reject(error)
-                } else if (response && response.statusCode != successStatusCode) {
+                } else if (response && response.statusCode != 200 && response.statusCode != 201) {
                     reject(body)
                 } else {
                     resolve(JSON.parse(body))
@@ -242,30 +242,30 @@ export class API {
     }
 
     CustomerCreate(req: CustomerCreateReq): Promise<Customer> {
-        return this.post<Customer>("customers", req, 201)
+        return this.post<Customer>("customers", req)
     }
 
     CustomerUpdate(req: CustomerUpdateReq): Promise<Customer> {
-        return this.post<Customer>(`customers?id=${req.id}`, req, 200)
+        return this.post<Customer>(`customers?id=${req.id}`, req)
     }
 
     PayoutCreate(req: PayoutReq): Promise<Payout> {
-        return this.post<Payout>(`payouts`, req, 201)
+        return this.post<Payout>(`payouts`, req)
     }
 
     PayoutGet(id: string): Promise<Payout> {
-        return this.post<Payout>(`payouts/${id}`, {}, 200)
+        return this.post<Payout>(`payouts/${id}`, {})
     }
 
     TokenCreate(req: TokenCreateReq): Promise<Token> {
-        return this.post<Token>(`tokens`, req, 201)
+        return this.post<Token>(`tokens`, req)
     }
 
     TransactionCreate(req: TransactionCreateReq): Promise<Transaction> {
-        return this.post<Transaction>(`transactions`, req, 201)
+        return this.post<Transaction>(`transactions`, req)
     }
 
     TransactionGet(id: string): Promise<Payout> {
-        return this.post<Payout>(`transactions/${id}`, {}, 200)
+        return this.post<Payout>(`transactions/${id}`, {})
     }
 }
