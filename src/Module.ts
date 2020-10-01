@@ -1,5 +1,5 @@
 import * as itransact from 'itransact-node'
-import {createHmac} from 'crypto'
+import { createHmac } from 'crypto'
 import request from 'request'
 
 export declare interface Customer {
@@ -229,7 +229,11 @@ export class API {
                 if (error) {
                     reject(error)
                 } else if (response && response.statusCode != 200 && response.statusCode != 201) {
-                    reject(body)
+                    try {
+                        reject(JSON.parse(body))
+                    } catch (err) {
+                        reject(body)
+                    }
                 } else {
                     resolve(JSON.parse(body))
                 }
