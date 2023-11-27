@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@types/node": "^20.8.6",
-    "itransact-node": "^2.1.0"
+    "itransact-node": "^2.1.0",
+    "request": "^2.88.2"
   }
 }
