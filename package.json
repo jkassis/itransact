@@ -27,7 +27,8 @@
     "prepare": "tsc"
   },
   "dependencies": {
-    "@types/node": "^14.11.2",
-    "itransact-node": "^2.1.0"
+    "@types/node": "^20.8.6",
+    "itransact-node": "^2.1.0",
+    "node": "^18.0.2"
   }
 }
